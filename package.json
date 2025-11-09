@@ -1,0 +1,30 @@
+{
+  "name": "cropcred",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "blockchain"
+  ],
+  "scripts": {
+  "chain": "npm --workspace blockchain run node",
+
+  "compile:chain": "npm --workspace blockchain run compile",
+  "chain:build": "npm run compile:chain",
+
+  "deploy:local": "npm --workspace blockchain run deploy:local",
+  "deploy:amoy": "npm --workspace blockchain run deploy:amoy",
+
+  "backend": "npm --workspace backend run dev",
+  "frontend": "npm --workspace frontend run dev",
+
+  "dev": "concurrently -k -n CHAIN,BACKEND,FRONTEND -c cyan,magenta,green \"npm:chain\" \"npm:backend\" \"npm:frontend\"",
+
+ "sync:abi": "node scripts/sync-abi.mjs"
+
+}
+,
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
