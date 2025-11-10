@@ -1,0 +1,9 @@
+{
+  "batchId": "BATCH-1234",
+  "certificateID": "0bafd298-4cc8-49bf-87f4-01fc66149fde",
+  "eventType": "CREATED",
+  "actor": "0xDeaDbeefDeAdbeEF00000000000000000000beEF",
+  "payload": {
+    "notes": "AWS write test"
+  }
+}

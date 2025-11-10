@@ -1,0 +1,12 @@
+[
+  {
+    "IndexName": "GSI1_CertificateIdCreatedAt",
+    "KeySchema": [
+      { "AttributeName": "certificateID", "KeyType": "HASH" },
+      { "AttributeName": "createdAt", "KeyType": "RANGE" }
+    ],
+    "Projection": {
+      "ProjectionType": "ALL"
+    }
+  }
+]

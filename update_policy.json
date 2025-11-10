@@ -1,0 +1,7 @@
+{
+  "Key": { "certificateID": { "S": "CERT-LOCAL-DDB-01" } },
+  "UpdateExpression": "SET #m = if_not_exists(#m, :empty), #m.#pa = :true",
+  "ExpressionAttributeNames": { "#m": "meta", "#pa": "policyAccepted" },
+  "ExpressionAttributeValues": { ":empty": { "M": {} }, ":true": { "BOOL": true } },
+  "ReturnValues": "ALL_NEW"
+}

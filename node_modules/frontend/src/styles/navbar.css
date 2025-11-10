@@ -1,0 +1,9 @@
+.navbar {
+  position: fixed; top: 0; left:0; right:0; z-index: 60;
+  background: rgba(255,255,255,0.98);
+  border-bottom: 1px solid #eef3ee;
+}
+.nav-inner { display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
+.logo a { font-weight:700; color:var(--dark-green); text-decoration:none; font-size:20px; }
+.nav-links a { margin: 0 10px; color: #333; text-decoration:none; font-weight:500; }
+.nav-links a:hover{ color:var(--green) }

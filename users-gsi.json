@@ -1,0 +1,11 @@
+[
+  {
+    "IndexName": "emailRoleGSI",
+    "KeySchema": [
+      { "AttributeName": "email", "KeyType": "HASH" },
+      { "AttributeName": "role",  "KeyType": "RANGE" }
+    ],
+    "Projection": { "ProjectionType": "ALL" },
+    "ProvisionedThroughput": { "ReadCapacityUnits": 5, "WriteCapacityUnits": 5 }
+  }
+]
