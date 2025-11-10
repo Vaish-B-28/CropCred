@@ -1,4 +1,19 @@
-# Ignore all env files anywhere
+# dependencies
+node_modules/
+**/node_modules/
+
+# env/secrets
+.env
 **/.env
+.env.local
 **/.env.local
-**/.env.*
+
+# build
+dist/
+build/
+coverage/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
