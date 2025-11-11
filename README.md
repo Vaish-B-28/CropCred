@@ -40,7 +40,7 @@ CropCred/
 
 
 
-# 🛠️ Setup Instructions (Run this on your laptop)
+# Setup Instructions (Run this on your laptop)
 
 ## 1️ Clone the repo
 
@@ -265,7 +265,7 @@ backend/test/Postman_Collection.json
 
 ---
 
-## 👥 Team Division (5-person Work Contribution)
+## Team Division (5-person Work Contribution)
 
 | Person | Responsibility                              |
 | ------ | ------------------------------------------- |
