@@ -1,23 +1,23 @@
-# 🌾 CropCred — Blockchain + AWS based Crop Traceability & Credibility Platform
+# CropCred — Blockchain + AWS based Crop Traceability & Credibility Platform
 
 > Know your food. Trust your farmer.  
 > Every crop batch becomes traceable and tamper-proof using Blockchain + QR + AWS DynamoDB.
 
 ---
 
-## ✨ What CropCred Does
+## What CropCred Does
 
 | Role        | What they can do |
 |-------------|------------------|
-| 👨‍🌾 Farmer  | Signup using OTP → Create crop batch → Upload docs → Add lifecycle events (harvest/storage/transport) |
-| 🔗 Blockchain | Stores hash of each lifecycle event (immutability & trust) |
-| 🧠 Backend   | Auth, storing events, credibility scoring, QR generation |
-| 🛍️ Consumer | Scan QR → View timeline + credibility score |
+|  Farmer  | Signup using OTP → Create crop batch → Upload docs → Add lifecycle events (harvest/storage/transport) |
+|  Blockchain | Stores hash of each lifecycle event (immutability & trust) |
+|  Backend   | Auth, storing events, credibility scoring, QR generation |
+|  Consumer | Scan QR → View timeline + credibility score |
 
 ---
 
 
-## 🧠 Architecture
+## Architecture
 ```
 React Frontend → Express Backend → DynamoDB + S3
 ↓
@@ -26,7 +26,7 @@ Solidity Smart Contract (Hardhat)
 
 ---
 
-## 📦 Monorepo Structure
+## Monorepo Structure
 ```
 CropCred/
 ├─ backend/ # Express API, OTP Auth, DynamoDB, Credibility Engine
@@ -42,16 +42,16 @@ CropCred/
 
 # 🛠️ Setup Instructions (Run this on your laptop)
 
-## 1️⃣ Clone the repo
+## 1️ Clone the repo
 
 ```sh
 git clone https://github.com/<your-username>/CropCred.git
 cd CropCred
-````
+```
 
 ---
 
-## 2️⃣ Install dependencies
+## 2️ Install dependencies
 
 At **project root**:
 
@@ -63,9 +63,9 @@ Because of workspaces, this installs frontend + backend + blockchain in one shot
 
 ---
 
-## 3️⃣ Environment Variables
+## 3️ Environment Variables
 
-### ✅ backend/.env
+###  backend/.env
 
 > ⚠️ Never commit real AWS keys or private keys to GitHub.
 
@@ -107,7 +107,7 @@ CORS_ORIGINS=http://localhost:5173
 
 ---
 
-### ✅ frontend/.env.local
+###  frontend/.env.local
 
 ```
 VITE_API_URL=http://localhost:5000
@@ -122,7 +122,7 @@ VITE_PUBLIC_BASE_URL=http://localhost:5173
 
 ---
 
-### ✅ blockchain/.env
+###  blockchain/.env
 
 ```
 LOCAL_RPC_URL=http://127.0.0.1:8545
@@ -132,7 +132,7 @@ PRIVATE_KEY=<hardhat wallet PK or metamask test wallet>
 
 ---
 
-### ✅ `.env.example` (root)
+###  `.env.example` (root)
 
 > This file is what gets pushed to GitHub — **NO SECRETS**.
 
@@ -172,7 +172,7 @@ CORS_ORIGINS=
 
 ---
 
-## 4️⃣ Start Local Blockchain (Hardhat)
+## 4️ Start Local Blockchain (Hardhat)
 
 Terminal 1:
 
@@ -182,7 +182,7 @@ npm run chain
 
 ---
 
-## 5️⃣ Deploy Smart Contract + Sync ABI
+## 5️ Deploy Smart Contract + Sync ABI
 
 Terminal 2:
 
@@ -191,13 +191,13 @@ npm run deploy:local
 npm run sync:abi
 ```
 
-✅ Deploys contract
-✅ Generates ABI into backend
-✅ Updates frontend with contract address
+ - Deploys contract
+ - Generates ABI into backend
+ - Updates frontend with contract address
 
 ---
 
-## 6️⃣ Start Backend
+## 6️ Start Backend
 
 Terminal 3:
 
@@ -209,7 +209,7 @@ Backend → [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 7️⃣ Start Frontend
+## 7️ Start Frontend
 
 Terminal 4:
 
@@ -221,9 +221,9 @@ Frontend → [http://localhost:5173](http://localhost:5173)
 
 ---
 
-# ✅ End-to-End Flow
+#  End-to-End Flow
 
-### 👨‍🌾 Farmer Dashboard
+###  Farmer Dashboard
 
 1. Login using OTP → password
 2. Create Certificate (crop batch)
@@ -231,7 +231,7 @@ Frontend → [http://localhost:5173](http://localhost:5173)
 4. Add lifecycle events (DynamoDB + blockchain hash)
 5. Generate QR
 
-### 🛍️ Consumer
+###  Consumer
 
 Scan QR → `/v/batch/:batchId`
 
@@ -242,7 +242,7 @@ Shows:
 
 ---
 
-## ✅ Credibility Score Model
+##  Credibility Score Model
 
 | Metric             | Based On                             |
 | ------------------ | ------------------------------------ |
@@ -255,7 +255,7 @@ Shows:
 
 ---
 
-## 🧪 Test API (Postman)
+##  Test API (Postman)
 
 Import into Postman:
 
@@ -277,7 +277,7 @@ backend/test/Postman_Collection.json
 
 ---
 
-## ⭐ Future Enhancements
+##  Future Enhancements
 
 * Marketplace to sell verified crops
 * Mobile App for farmers
@@ -285,7 +285,7 @@ backend/test/Postman_Collection.json
 
 ---
 
-Made with ❤️, stress, and way too much coffee.
+Developed with a focus on innovation, reliability, and real-world impact.
 
 
 
